@@ -1,0 +1,38 @@
+.App{
+    background-image: url(https://img.freepik.com/premium-photo/dreamy-blue-pink-gradient-background-with-faint-white-horizon_1174990-191481.jpg?w=826);
+    background-size:cover ;
+    background-position: center;
+
+    height: 100vh; 
+}
+
+.main-title-css {
+    width: 300px;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: none;
+    border-radius: 5px;
+    
+}
+
+.main-all-list-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 500px;
+    text-align: center;
+}
+
+.main-list-one {
+    width: 200px;
+
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid blue;
+}
