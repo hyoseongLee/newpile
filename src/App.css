@@ -15,7 +15,7 @@
     font-weight: bold;
     background-color: none;
     border-radius: 5px;
-    
+    cursor: pointer;
 }
 
 .main-all-list-one {
@@ -35,4 +35,5 @@
     margin: 15px;
     padding: 15px;
     border: 1px solid blue;
+    cursor: pointer;
 }

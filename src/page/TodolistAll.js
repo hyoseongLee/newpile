@@ -8,6 +8,7 @@ import TodoInsert from '../component/Todolist/TodoInsert';
 let nextId = 4;
 
 const TodolistAll = () => {
+    const [selectedTodo, setSelectedTodo] = useState(null)
     const [insertToggle, setInsertToggle] = useState(false);
     const [todos, setTodos] = useState([
         { id: 1, text: "할일 1", checked: true },
@@ -16,9 +17,25 @@ const TodolistAll = () => {
     ]);
 
     const onInsertToggle = () => {
+        if (selectedTodo) {
+            setSelectedTodo(null)
+        }
         setInsertToggle(prev => !prev);
     };
 
+    const onChangeSelectedTodo = todo => {
+        setSelectedTodo(todo)
+    }
+    const onRemove = id => {
+        onInsertToggle()
+        setTodos(todos => todos.filter(todo => todo.id !== id))
+    }
+
+    const onEddit = (id, text) => {
+        onInsertToggle()
+        setTodos(todos => 
+            todos.map(todo => (todo.id === id? { ...todo, text } : todo)))
+    }
     const onInsertTodo = text => {
         if (text === "") {
             return alert("할일을 입력해주세요");
@@ -28,29 +45,34 @@ const TodolistAll = () => {
                 text,
                 checked: false
             };
-            setTodos(Todos => Todos.concat(todo));
+            setTodos(todos => todos.concat(todo));
             nextId++
         }
     };
 
-const onCheckToggle = id => {
-    setTodos(todos => todos.map(todo => todo.id === id ?
-        {...todo, checked: !todo.checked} : todo
-    ))
-}
+    const onCheckToggle = id => {
+        setTodos(todos => todos.map(todo => todo.id === id ?
+            { ...todo, checked: !todo.checked } : todo
+        ))
+    }
 
     return (
         <Template todoLength={todos.length}>
-            <Todolist 
-            todos={todos}  
-            onCheckToggle={onCheckToggle}/>
+            <Todolist
+                todos={todos}
+                onCheckToggle={onCheckToggle}
+                onInsertToggle={onInsertToggle}
+                onChangeSelectedTodo={onChangeSelectedTodo} />
             <div className='add-todo-button' onClick={onInsertToggle}>
                 <MdAddCircle />
             </div>
             {insertToggle && (
-                <TodoInsert 
-                    onInsertToggle={onInsertToggle} 
+                <TodoInsert
+                    selectedTodo={selectedTodo}
+                    onInsertToggle={onInsertToggle}
                     onInsertTodo={onInsertTodo}
+                    onRemove={onRemove}
+                    onEddit={onEddit}
                 />
             )}
         </Template>
