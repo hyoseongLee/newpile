@@ -1,0 +1,60 @@
+.rsp-box {
+    width: 500px;
+    height: 450px;
+    border: 1px solid black;
+    background-color: none;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.125rem;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.rsp-img {
+    width: 325px;
+    height: 275px;
+}
+
+.rsp-main {
+    max-height: 100vw;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.rsp-header {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.win {
+    border: 1px solid green;
+    color: green;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.lose {
+    border: 1px solid red;
+    color: red;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.tie {
+    border: 1px solid black;
+    color: black;
+    margin-left: 20px;
+    text-align: center;
+}

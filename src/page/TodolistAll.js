@@ -5,7 +5,7 @@ import Todolist from '../component/Todolist/Todolist';
 import { MdAddCircle } from 'react-icons/md';
 import TodoInsert from '../component/Todolist/TodoInsert';
 
-let nextId = 4;
+let nextId = 6;
 
 const TodolistAll = () => {
     const [selectedTodo, setSelectedTodo] = useState(null)
@@ -14,6 +14,8 @@ const TodolistAll = () => {
         { id: 1, text: "할일 1", checked: true },
         { id: 2, text: "할일 2", checked: false },
         { id: 3, text: "할일 3", checked: true },
+        { id: 4, text: "할일 4", checked: false},
+        { id: 5, text: "할일 5", checked: true},
     ]);
 
     const onInsertToggle = () => {

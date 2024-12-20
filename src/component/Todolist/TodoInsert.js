@@ -4,7 +4,13 @@ import '../../CssComponent/Todolist.css';
 import { TiTrash, TiPencil } from 'react-icons/ti';
 
 
-const TodoInsert = ({ onInsertToggle, onInsertTodo, selectedTodo, onEddit, onRemove }) => {
+const TodoInsert = ({ 
+  onInsertToggle, 
+  onInsertTodo, 
+  selectedTodo, 
+  onEddit, 
+  onRemove 
+}) => {
   const [value, setValue] = useState("")
 
   const onChange = e => {

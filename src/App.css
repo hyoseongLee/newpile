@@ -2,7 +2,7 @@
     background-image: url(https://img.freepik.com/premium-photo/dreamy-blue-pink-gradient-background-with-faint-white-horizon_1174990-191481.jpg?w=826);
     background-size:cover ;
     background-position: center;
-
+    background-repeat: repeat;
     height: 100vh; 
 }
 
