@@ -19,7 +19,6 @@ const Todoitem = ({ todo, onCheckToggle,onInsertToggle,onChangeSelectedTodo }) =
         <div className='Todo-text' onClick={()=>{
           onChangeSelectedTodo(todo)
           onInsertToggle()
-
         }}>
           {text} </div>
       </div>
